@@ -135,6 +135,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'apipagos/static'),)
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+DISABLE_COLLECTSTATIC = 0
 
 if not DEBUG:   
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
